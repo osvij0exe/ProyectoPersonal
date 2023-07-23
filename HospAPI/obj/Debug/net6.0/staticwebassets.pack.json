@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\065b965a-2772-4bd4-8eeb-ba38abe95da3.pdf",
+      "PackagePath": "staticwebassets\\Articulos\\065b965a-2772-4bd4-8eeb-ba38abe95da3.pdf"
+    },
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\244e7e63-901a-4178-af10-b1f3c377a998.docx",
+      "PackagePath": "staticwebassets\\Articulos\\244e7e63-901a-4178-af10-b1f3c377a998.docx"
+    },
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\40adc889-edde-4d86-8a2b-cd774d07225c.pdf",
+      "PackagePath": "staticwebassets\\Articulos\\40adc889-edde-4d86-8a2b-cd774d07225c.pdf"
+    },
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\43550139-6272-4391-b364-75dbfadc0ad2.pdf",
+      "PackagePath": "staticwebassets\\Articulos\\43550139-6272-4391-b364-75dbfadc0ad2.pdf"
+    },
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\7efa036e-cb32-4b94-bdfb-5bf8b4516f78.pdf",
+      "PackagePath": "staticwebassets\\Articulos\\7efa036e-cb32-4b94-bdfb-5bf8b4516f78.pdf"
+    },
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\e0a76f4f-4a0a-45b9-bd8d-894d25cb62a7.pdf",
+      "PackagePath": "staticwebassets\\Articulos\\e0a76f4f-4a0a-45b9-bd8d-894d25cb62a7.pdf"
+    },
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\e2d27db4-77b0-4abe-9103-cc60c7d484be.pdf",
+      "PackagePath": "staticwebassets\\Articulos\\e2d27db4-77b0-4abe-9103-cc60c7d484be.pdf"
+    },
+    {
+      "Id": "C:\\Users\\JoseC\\Desktop\\cursos\\C#EntityFrameWork curso\\proyectoHosp\\HospAPI\\HospAPI\\wwwroot\\Articulos\\fbb59bae-974e-48aa-b712-8275a5264734.pdf",
+      "PackagePath": "staticwebassets\\Articulos\\fbb59bae-974e-48aa-b712-8275a5264734.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.HospAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.HospAPI.props",
+      "PackagePath": "build\\HospAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.HospAPI.props",
+      "PackagePath": "buildMultiTargeting\\HospAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.HospAPI.props",
+      "PackagePath": "buildTransitive\\HospAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
