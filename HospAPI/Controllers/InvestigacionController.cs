@@ -166,7 +166,8 @@ namespace HospAPI.Controllers
         }
 
         [HttpGet("ArticuloPorDatos")]
-        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorDatos([FromQuery] InvestigacionFiltroDTO investigacionFiltroDTO, [FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorDatos([FromQuery] InvestigacionFiltroDTO investigacionFiltroDTO,
+            [FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default)
         {
             var articuloMedQueriable = _context.Investigaciones.AsQueryable();
             await HttpContext.InsertarParametrosPaginacionEnCabecera(articuloMedQueriable);

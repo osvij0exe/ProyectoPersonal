@@ -4,6 +4,7 @@ using HospAPI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230723065207_SistemaUsuario")]
+    partial class SistemaUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -401,29 +404,6 @@ namespace HospAPI.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "6e764357-10d2-4c58-9657-1a834586ef6c",
-                            ConcurrencyStamp = "348c334d-27d6-49a1-a650-0f0903ad1655",
-                            Name = "Admin",
-                            NormalizedName = "Admin"
-                        },
-                        new
-                        {
-                            Id = "f4dff315-308f-4591-a06b-a148e37e23f8",
-                            ConcurrencyStamp = "2e43b388-4895-4905-ba44-50aef106ea95",
-                            Name = "Medico",
-                            NormalizedName = "Medico"
-                        },
-                        new
-                        {
-                            Id = "5890c3b5-382f-4ff3-abec-5aaabbc0e056",
-                            ConcurrencyStamp = "8462250e-1a48-405d-889f-b9089b5bf570",
-                            Name = "Usruaio",
-                            NormalizedName = "Usuario"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -4,6 +4,8 @@ using HospAPI.DTOs.PacientesDTOs;
 using HospAPI.Models;
 using HospAPI.Servicios.interfaces;
 using HospAPI.Utilidades;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -33,6 +35,7 @@ namespace HospAPI.Controllers
 
 
         [HttpPost("AgregarPaciente")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> PostPaciente(InsertarPacienteDTO insertarPacienteDTO,CancellationToken cancellationToken = default)
         {
 

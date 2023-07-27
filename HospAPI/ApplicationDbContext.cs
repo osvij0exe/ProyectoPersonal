@@ -1,7 +1,9 @@
 ﻿using HospAPI.Models;
 using HospAPI.Models.Configuraciones;
+using HospAPI.Models.Seeding;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace HospAPI
 {
@@ -14,6 +16,11 @@ namespace HospAPI
         {
             base.OnModelCreating(modelBuilder);
 
+        /************                       Seeding                      ***************/ 
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            SeedingModels.Seed(modelBuilder);
+
         /************              Configuracion de los Models           ********************/
             modelBuilder.ApplyConfiguration(new ReporteConfig());
             modelBuilder.ApplyConfiguration(new EstudioConfig());
@@ -23,6 +30,7 @@ namespace HospAPI
             modelBuilder.ApplyConfiguration(new MedicoConfig());
             modelBuilder.ApplyConfiguration(new PacienteConfig());
             modelBuilder.ApplyConfiguration(new TipoEstudioConfig());
+
 
         }
 

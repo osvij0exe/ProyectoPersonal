@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using HospAPI.DTOs.CuentasDTOs;
 using HospAPI.DTOs.InvetigacionDTOs;
 using HospAPI.DTOs.MedcosDTOs;
 using HospAPI.DTOs.PacientesDTOs;
 using HospAPI.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace HospAPI.Utilidades
 {
@@ -31,6 +33,9 @@ namespace HospAPI.Utilidades
             CreateMap<Medico,MedicoInvestigacionDTO>().ReverseMap();
             CreateMap<Medico,GetMedicosFiltroDTO>().ReverseMap();
             CreateMap<Investigacion, InvestigacionFiltroDTO>();
+
+            CreateMap<IdentityUser, UsuarioDTO>();
+            
 
         }
     }

@@ -6,6 +6,8 @@ using HospAPI.Models;
 using HospAPI.Servicios;
 using HospAPI.Servicios.interfaces;
 using HospAPI.Utilidades;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -14,6 +16,7 @@ namespace HospAPI.Controllers
 {
     [ApiController]
     [Route("api/Medicos")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
     public class MedicosController : ControllerBase
     {
         private readonly IMedicosServices _services;
@@ -32,6 +35,7 @@ namespace HospAPI.Controllers
         /*********************************************************************/
 
         [HttpPost]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> PostMedico( InsertarMedicoDTO insertarMedicoDTO,CancellationToken cancellationToken = default)
         {
 ;
@@ -45,6 +49,7 @@ namespace HospAPI.Controllers
 
         // forma 1 de paginación
         [HttpGet("listaPaginada")]
+        //[AllowAnonymous]
         public async Task<IEnumerable<GetMedicoDTO>> GetMedicoList(int pagina = 1, CancellationToken cancellationToken = default)
         {
 
