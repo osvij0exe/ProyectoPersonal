@@ -50,7 +50,7 @@ namespace HospAPI.Controllers
         // forma 1 de paginación
         [HttpGet("listaPaginada")]
         //[AllowAnonymous]
-        public async Task<IEnumerable<GetMedicoDTO>> GetMedicoList(int pagina = 1, CancellationToken cancellationToken = default)
+        async Task<IEnumerable<GetMedicoDTO>> GetMedicoList(int pagina = 1, CancellationToken cancellationToken = default)
         {
 
             return await _services.getMedicoListAsync(pagina, cancellationToken);

@@ -19,6 +19,7 @@ JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 //agregamos el servicio a la inyeccion de dependcia
 builder.Services.AddTransient<IMedicosServices, MedicoServices>();
 builder.Services.AddTransient<IPacienteService, PacientesServices>();
+builder.Services.AddTransient<IInvestigacionesServices, InvestigacionServices>();
 
 builder.Services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
 builder.Services.AddHttpContextAccessor();
