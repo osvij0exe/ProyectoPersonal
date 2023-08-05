@@ -31,7 +31,7 @@ namespace HospAPI.Servicios
         /*********************************************************************/
 
 
-        public async Task<ActionResult> PostArticulo([FromForm] InsertarInvestigacionDTO insertarInvestigacionDTO, CancellationToken cancellationToken = default)
+        public async Task<ActionResult> PostArticuloAsync([FromForm] InsertarInvestigacionDTO insertarInvestigacionDTO, CancellationToken cancellationToken = default)
         {
             var articulo = _mapper.Map<Investigacion>(insertarInvestigacionDTO);
 
@@ -74,7 +74,7 @@ namespace HospAPI.Servicios
         /*                       METODO GET                                 */
         /*                  CONSULTAR REGISTROS                             */
         /*********************************************************************/
-        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetListaArticulos([FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetListaArticulosAsync([FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default)
         {
             var artQueryable = _context.Investigaciones.AsQueryable();
             await HttpContext.InsertarParametrosPaginacionEnCabecera(artQueryable);
@@ -87,7 +87,7 @@ namespace HospAPI.Servicios
             return _mapper.Map<List<GetInvestigacionDTO>>(ArticuloBD);
 
         }
-        public async Task<ActionResult<GetInvestigacionDTO>> Get(int id, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<GetInvestigacionDTO>> GetAsync(int id, CancellationToken cancellationToken = default)
         {
             var articulo = await _context.Investigaciones
              .Include(MeidocoDb => MeidocoDb.Medicos)
@@ -99,7 +99,7 @@ namespace HospAPI.Servicios
             }
             return _mapper.Map<GetInvestigacionDTO>(articulo);
         }
-        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorNombre(string nombre, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorNombreAsync(string nombre, CancellationToken cancellationToken = default)
         {
             //var articulo = await _context.Investigaciones.FirstOrDefaultAsync(m => m.NombreArticulo == nombre);
             var articulo = await _context.Investigaciones
@@ -113,7 +113,7 @@ namespace HospAPI.Servicios
             }
             return _mapper.Map<List<GetInvestigacionDTO>>(articulo);
         }
-        public async Task<ActionResult<List<GetMedicosFiltroDTO>>> GetInvestigacionPorDatosMedico([FromQuery] MedicoInvestigacionDTO medicoInvestigacionDTO, int pagina = 1, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<List<GetMedicosFiltroDTO>>> GetInvestigacionPorDatosMedicoAsync([FromQuery] MedicoInvestigacionDTO medicoInvestigacionDTO, int pagina = 1, CancellationToken cancellationToken = default)
         {
             var cantidadRegistrosPorPagina = 5;
 
@@ -157,7 +157,7 @@ namespace HospAPI.Servicios
 
             return _mapper.Map<List<GetMedicosFiltroDTO>>(artMedicos);
         }
-        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorDatos([FromQuery] InvestigacionFiltroDTO investigacionFiltroDTO, [FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorDatosAsync([FromQuery] InvestigacionFiltroDTO investigacionFiltroDTO, [FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default)
         {
             var articuloMedQueriable = _context.Investigaciones.AsQueryable();
             await HttpContext.InsertarParametrosPaginacionEnCabecera(articuloMedQueriable);

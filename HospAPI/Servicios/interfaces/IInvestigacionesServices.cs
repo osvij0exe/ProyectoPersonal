@@ -6,12 +6,12 @@ namespace HospAPI.Servicios.interfaces
 {
     public interface IInvestigacionesServices
     {
-        Task<ActionResult> PostArticulo([FromForm] InsertarInvestigacionDTO insertarInvestigacionDTO, CancellationToken cancellationToken = default);
-        Task<ActionResult<List<GetInvestigacionDTO>>> GetListaArticulos([FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default);
-        Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorNombre(string nombre, CancellationToken cancellationToken = default);
-        Task<ActionResult<GetInvestigacionDTO>> Get(int id, CancellationToken cancellationToken = default);
-        Task<ActionResult<List<GetMedicosFiltroDTO>>> GetInvestigacionPorDatosMedico([FromQuery] MedicoInvestigacionDTO medicoInvestigacionDTO, int pagina = 1, CancellationToken cancellationToken = default);
-        Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorDatos([FromQuery] InvestigacionFiltroDTO investigacionFiltroDTO,
+        Task<ActionResult> PostArticuloAsync([FromForm] InsertarInvestigacionDTO insertarInvestigacionDTO, CancellationToken cancellationToken = default);
+        Task<ActionResult<List<GetInvestigacionDTO>>> GetListaArticulosAsync([FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default);
+        Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorNombreAsync(string nombre, CancellationToken cancellationToken = default);
+        Task<ActionResult<GetInvestigacionDTO>> GetAsync(int id, CancellationToken cancellationToken = default);
+        Task<ActionResult<List<GetMedicosFiltroDTO>>> GetInvestigacionPorDatosMedicoAsync([FromQuery] MedicoInvestigacionDTO medicoInvestigacionDTO, int pagina = 1, CancellationToken cancellationToken = default);
+        Task<ActionResult<List<GetInvestigacionDTO>>> GetInvestigacionPorDatosAsync([FromQuery] InvestigacionFiltroDTO investigacionFiltroDTO,
             [FromQuery] PaginacionDTO paginacionDTO, CancellationToken cancellationToken = default);
 
     }
