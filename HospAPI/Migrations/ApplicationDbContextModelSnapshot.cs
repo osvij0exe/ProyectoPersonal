@@ -34,7 +34,7 @@ namespace HospAPI.Migrations
 
                     b.HasIndex("MedicosMedicoId");
 
-                    b.ToTable("ExpedienteMedico");
+                    b.ToTable("ExpedienteMedico", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.ArchivoEstudio", b =>
@@ -61,7 +61,7 @@ namespace HospAPI.Migrations
 
                     b.HasIndex("EstudioId");
 
-                    b.ToTable("ArchivosEstudios");
+                    b.ToTable("ArchivosEstudios", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.Estudio", b =>
@@ -86,7 +86,7 @@ namespace HospAPI.Migrations
 
                     b.HasIndex("TipoEstudioId");
 
-                    b.ToTable("Etudios");
+                    b.ToTable("Etudios", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.Expediente", b =>
@@ -111,7 +111,7 @@ namespace HospAPI.Migrations
                     b.HasIndex("PacienteId")
                         .IsUnique();
 
-                    b.ToTable("Expedientes");
+                    b.ToTable("Expedientes", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.Investigacion", b =>
@@ -141,7 +141,7 @@ namespace HospAPI.Migrations
 
                     b.HasKey("InvestigacionId");
 
-                    b.ToTable("Investigaciones");
+                    b.ToTable("Investigaciones", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.Laboratorio", b =>
@@ -171,7 +171,7 @@ namespace HospAPI.Migrations
 
                     b.HasIndex("PacienteId");
 
-                    b.ToTable("Laboratorios");
+                    b.ToTable("Laboratorios", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.Medico", b =>
@@ -237,7 +237,7 @@ namespace HospAPI.Migrations
 
                     b.HasKey("MedicoId");
 
-                    b.ToTable("Medicos");
+                    b.ToTable("Medicos", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.Paciente", b =>
@@ -303,7 +303,7 @@ namespace HospAPI.Migrations
 
                     b.HasKey("PacienteId");
 
-                    b.ToTable("Pacientes");
+                    b.ToTable("Pacientes", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.Reporte", b =>
@@ -344,7 +344,7 @@ namespace HospAPI.Migrations
 
                     b.HasIndex("PacienteId");
 
-                    b.ToTable("Reportes");
+                    b.ToTable("Reportes", (string)null);
                 });
 
             modelBuilder.Entity("HospAPI.Models.TipoEstudio", b =>
@@ -358,7 +358,7 @@ namespace HospAPI.Migrations
 
                     b.HasKey("TipoEstudioId");
 
-                    b.ToTable("TiposEstudios");
+                    b.ToTable("TiposEstudios", (string)null);
                 });
 
             modelBuilder.Entity("InvestigacionMedico", b =>
@@ -373,7 +373,7 @@ namespace HospAPI.Migrations
 
                     b.HasIndex("MedicosMedicoId");
 
-                    b.ToTable("InvestigacionMedico");
+                    b.ToTable("InvestigacionMedico", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -406,21 +406,18 @@ namespace HospAPI.Migrations
                         new
                         {
                             Id = "6e764357-10d2-4c58-9657-1a834586ef6c",
-                            ConcurrencyStamp = "348c334d-27d6-49a1-a650-0f0903ad1655",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "f4dff315-308f-4591-a06b-a148e37e23f8",
-                            ConcurrencyStamp = "2e43b388-4895-4905-ba44-50aef106ea95",
                             Name = "Medico",
                             NormalizedName = "Medico"
                         },
                         new
                         {
                             Id = "5890c3b5-382f-4ff3-abec-5aaabbc0e056",
-                            ConcurrencyStamp = "8462250e-1a48-405d-889f-b9089b5bf570",
                             Name = "Usruaio",
                             NormalizedName = "Usuario"
                         });

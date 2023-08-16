@@ -21,7 +21,6 @@ namespace HospAPI.DTOs.PacientesDTOs
         [StringLength(maximumLength: 20, ErrorMessage = "El campo debe ser menor de 20")]
         [PrimeraLetraMayusculaAtribute]
         public string ApellidoMaterno { get; set; }
-        [Display(Name = "Apellido Materno")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [ValidarGeneroAtribute]
         public char Genero { get; set; }

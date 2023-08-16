@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospAPI", "HospAPI\HospAPI.csproj", "{C78C4FD4-C0FF-4945-A582-D8D972FA2AB0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HopiApiTest", "HopiAoiTest\HopiApiTest.csproj", "{FDA770C7-E0F1-4785-BCC0-5D1DF185DEC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalMVC", "HospitalMVC\HospitalMVC.csproj", "{9751222F-7925-41E1-8E69-3500C40D534B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C78C4FD4-C0FF-4945-A582-D8D972FA2AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C78C4FD4-C0FF-4945-A582-D8D972FA2AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C78C4FD4-C0FF-4945-A582-D8D972FA2AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA770C7-E0F1-4785-BCC0-5D1DF185DEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA770C7-E0F1-4785-BCC0-5D1DF185DEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA770C7-E0F1-4785-BCC0-5D1DF185DEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA770C7-E0F1-4785-BCC0-5D1DF185DEC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9751222F-7925-41E1-8E69-3500C40D534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9751222F-7925-41E1-8E69-3500C40D534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9751222F-7925-41E1-8E69-3500C40D534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9751222F-7925-41E1-8E69-3500C40D534B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

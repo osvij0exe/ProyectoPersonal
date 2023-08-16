@@ -1,13 +1,14 @@
 ﻿using HospAPI.Models;
 using HospAPI.Models.Configuraciones;
 using HospAPI.Models.Seeding;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace HospAPI
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext/*<HospIdentityUsers> */// <clase Propira de Usuarios>
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
@@ -31,7 +32,10 @@ namespace HospAPI
             modelBuilder.ApplyConfiguration(new PacienteConfig());
             modelBuilder.ApplyConfiguration(new TipoEstudioConfig());
 
-
+            //renombrar las tablas de los Usuarios
+            ///modelBuilder.Entity<HospIdentityUsers>(h => h.ToTable("Usuarios"));
+            ///modelBuilder.Entity<IdentityRole>(e => e.ToTable("Role"));
+            ///modelBuilder.Entity<IdentityUserRole<string>>(e => e.ToTable("UsuariosRoles"));
         }
 
 
@@ -45,6 +49,7 @@ namespace HospAPI
         public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<TipoEstudio> TiposEstudios{ get; set; }
         public DbSet<ArchivoEstudio> ArchivosEstudios{ get; set; }
+
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HospAPI.DTOs.CuentasDTOs;
 using HospAPI.DTOs.InvetigacionDTOs;
+using HospAPI.DTOs.LaboratoriosDTOs;
 using HospAPI.DTOs.MedcosDTOs;
 using HospAPI.DTOs.PacientesDTOs;
 using HospAPI.Models;
@@ -35,7 +36,13 @@ namespace HospAPI.Utilidades
             CreateMap<Investigacion, InvestigacionFiltroDTO>();
 
             CreateMap<IdentityUser, UsuarioDTO>();
-            
+            CreateMap<CredencialesUsuario, IdentityUser>();
+            CreateMap<CredencialesUsuario, HospIdentityUsers>();
+
+            CreateMap<InsertarLaboratoriosDTO, Laboratorio>();
+            CreateMap<Laboratorio,GetLaboratoriosDTO>();
+            CreateMap<Paciente, GetpacienteLabDTO>().ReverseMap();
+            CreateMap<Laboratorio, LaboratoriosDTO>().ReverseMap();
 
         }
     }

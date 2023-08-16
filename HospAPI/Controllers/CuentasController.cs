@@ -51,7 +51,7 @@ namespace HospAPI.Controllers
             var usuario = new IdentityUser
             {
                 UserName = credencialesUsuario.Email,
-                Email = credencialesUsuario.Email
+                Email = credencialesUsuario.Email,
             };
             var resultado = await _userManager.CreateAsync(usuario, credencialesUsuario.Password);
 

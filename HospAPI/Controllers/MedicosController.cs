@@ -16,7 +16,7 @@ namespace HospAPI.Controllers
 {
     [ApiController]
     [Route("api/Medicos")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class MedicosController : ControllerBase
     {
         private readonly IMedicosServices _services;
@@ -50,7 +50,7 @@ namespace HospAPI.Controllers
         // forma 1 de paginación
         [HttpGet("listaPaginada")]
         //[AllowAnonymous]
-        async Task<IEnumerable<GetMedicoDTO>> GetMedicoList(int pagina = 1, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<GetMedicoDTO>> GetMedicoList(int pagina = 1, CancellationToken cancellationToken = default)
         {
 
             return await _services.getMedicoListAsync(pagina, cancellationToken);
